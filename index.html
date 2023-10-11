@@ -83,6 +83,7 @@
   </div>
   <script>
     // id값들 선언하기
+    let root = document.getElementById('root');
     let apart = document.getElementById('apart');
     let leftapart = document.getElementById('leftapart');
     let rightapart = document.getElementById('rightapart');
@@ -110,8 +111,10 @@
     }
     )
     button2.addEventListener('click', function() {
-      root.style.backgroundColor = 'white';
-      root.style.background = "dark.jpg";
+      root.style.backgroundImage = "url(dark.jpg)"
+      root.style.backgroundSize = "cover"
+      console.log(root.style);
+      // root.style.backgroundImage = URL("dark.jpg");
       for(let i=0; i<10; i++) {
       rightapart.children[i].style.backgroundColor = 'black';
       leftapart.children[i].style.backgroundColor = 'black';
