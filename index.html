@@ -103,16 +103,22 @@
   
     button.addEventListener('click', function() {
       root.style.backgroundColor = 'black';
-      rightapart.style.backgroundColor = 'white';
-      leftapart.style.backgroundColor = 'white';
+      for(let i=0; i<10; i++) {
+      rightapart.children[i].style.backgroundColor = 'white';
+      leftapart.children[i].style.backgroundColor = 'white';
+      }
     }
     )
     button2.addEventListener('click', function() {
       root.style.backgroundColor = 'white';
-      rightapart.style.backgroundColor = 'black';
-      leftapart.style.backgroundColor = 'black';
+      root.style.background = "dark.jpg";
+      for(let i=0; i<10; i++) {
+      rightapart.children[i].style.backgroundColor = 'black';
+      leftapart.children[i].style.backgroundColor = 'black';
+      }
     }
     )
+    
     // )
   </script>
 </body>
