@@ -93,37 +93,43 @@
     // console.log(leftboxclick);
 // apart부분 클릭시 div색상 변경
     apart.addEventListener('click', function(event) {
+      // 감싸고 있는 apart, rightapart, leftapart가 eventtarget이 되면 안되기 때문에 조건 제외
       if(event.target !== leftapart && event.target !== rightapart && event.target !== apart ) {
+      // 배경화면이 검은 색이면 
       if(event.target.style.backgroundColor === 'black') {
+      // 하얀색으로 변경
         event.target.style.backgroundColor = 'white'
       } else {
-      event.target.style.backgroundColor = 'black';
-      }
+        event.target.style.backgroundColor = 'black'
+      
       }}
+    }
     )
-  
+      // 클릭시 배경화면 url로 설정
     button.addEventListener('click', function() {
       root.style.backgroundImage = "url(day.jpg)"
       root.style.backgroundSize = "cover"
+      // 클릭시 왼쪽 오른쪽 아파트의 자식태그의 창문도 바뀌도록 설정
+      // dark모드 
       for(let i=0; i<10; i++) {
       rightapart.children[i].style.backgroundColor = 'white';
       leftapart.children[i].style.backgroundColor = 'white';
       }
     }
     )
+    // 클릭시 왼쪽 오른쪽 아파트의 자식태그의 창문도 바뀌도록 설정
+      // day모드 
     button2.addEventListener('click', function() {
-      root.style.backgroundImage = "url(dark.jpg)"
-      root.style.backgroundSize = "cover"
-      console.log(root.style);
-      // root.style.backgroundImage = URL("dark.jpg");
+      root.style.backgroundImage = "url(dark.jpg)";
+      root.style.backgroundSize = "cover";
+      // console.log(root.style);
       for(let i=0; i<10; i++) {
       rightapart.children[i].style.backgroundColor = 'black';
       leftapart.children[i].style.backgroundColor = 'black';
       }
     }
     )
-    
-    // )
+
   </script>
 </body>
 </html>
